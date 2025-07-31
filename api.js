@@ -4,7 +4,8 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/api/user') {
     const user = {
       firstname: 'John',
-      last: 'Doe'
+      last: 'Doe',
+      age: 30
     };
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify(user));
